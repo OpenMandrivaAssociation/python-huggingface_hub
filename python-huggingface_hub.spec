@@ -25,12 +25,14 @@ command-line tools.
 Summary:	Hugging Face CLI and Python ML stack
 Group:		Development/Python
 Requires:	python-huggingface_hub = %{EVRD}
-Requires:	python-tokenizers
-Requires:	python-safetensors
-Requires:	python-transformers
-Requires:	python-accelerate
-Requires:	python-peft
-Requires:	python-diffusers
+# Weak deps so extra-tests can install this metapackage before
+# the rest of the stack is published.
+Recommends:	python-tokenizers
+Recommends:	python-safetensors
+Recommends:	python-transformers
+Recommends:	python-accelerate
+Recommends:	python-peft
+Recommends:	python-diffusers
 
 %description -n huggingface
 Meta-package pulling in huggingface-cli and the commonly used
