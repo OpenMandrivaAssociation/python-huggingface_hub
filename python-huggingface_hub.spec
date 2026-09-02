@@ -1,5 +1,5 @@
 Name:		python-huggingface_hub
-Version:	1.27.0
+Version:	1.29.0
 Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/h/huggingface_hub/huggingface_hub-%{version}.tar.gz
 Summary:	Client library for the Hugging Face Hub
