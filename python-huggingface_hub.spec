@@ -1,5 +1,5 @@
 Name:		python-huggingface_hub
-Version:	1.29.0
+Version:	2.1.1
 Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/h/huggingface_hub/huggingface_hub-%{version}.tar.gz
 Summary:	Client library for the Hugging Face Hub
@@ -18,8 +18,7 @@ Suggests:	git-lfs
 
 %description
 Client library to download and publish models, datasets and other
-repositories on the Hugging Face Hub. Ships the hf / huggingface-cli
-command-line tools.
+repositories on the Hugging Face Hub. Ships the hf command-line tool.
 
 %package -n huggingface
 Summary:	Hugging Face CLI and Python ML stack
@@ -35,7 +34,7 @@ Recommends:	python-peft
 Recommends:	python-diffusers
 
 %description -n huggingface
-Meta-package pulling in huggingface-cli and the commonly used
+Meta-package pulling in the hf command-line tool and the commonly used
 Hugging Face Python libraries (transformers, tokenizers,
 safetensors, accelerate, peft and diffusers).
 
@@ -43,7 +42,6 @@ safetensors, accelerate, peft and diffusers).
 %doc README.md
 %license LICENSE
 %{_bindir}/hf
-%{_bindir}/huggingface-cli
 %{_bindir}/tiny-agents
 %{py_sitedir}/huggingface_hub
 %{py_sitedir}/huggingface_hub-*.*-info
