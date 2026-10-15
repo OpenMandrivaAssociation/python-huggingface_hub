@@ -1,6 +1,6 @@
 Name:		python-huggingface_hub
-Version:	2.1.1
-Release:	1
+Version:	1.29.0
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/source/h/huggingface_hub/huggingface_hub-%{version}.tar.gz
 Summary:	Client library for the Hugging Face Hub
 URL:		https://github.com/huggingface/huggingface_hub
@@ -9,8 +9,9 @@ Group:		Development/Python
 BuildArch:	noarch
 BuildSystem:	python
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:	python%{pyver}dist(setuptools)
 # huggingface-cli used to be a standalone project
 Provides:	huggingface-cli = %{version}
@@ -18,7 +19,8 @@ Suggests:	git-lfs
 
 %description
 Client library to download and publish models, datasets and other
-repositories on the Hugging Face Hub. Ships the hf command-line tool.
+repositories on the Hugging Face Hub. Ships the hf / huggingface-cli
+command-line tools.
 
 %package -n huggingface
 Summary:	Hugging Face CLI and Python ML stack
@@ -34,7 +36,7 @@ Recommends:	python-peft
 Recommends:	python-diffusers
 
 %description -n huggingface
-Meta-package pulling in the hf command-line tool and the commonly used
+Meta-package pulling in huggingface-cli and the commonly used
 Hugging Face Python libraries (transformers, tokenizers,
 safetensors, accelerate, peft and diffusers).
 
@@ -42,6 +44,7 @@ safetensors, accelerate, peft and diffusers).
 %doc README.md
 %license LICENSE
 %{_bindir}/hf
+%{_bindir}/huggingface-cli
 %{_bindir}/tiny-agents
 %{py_sitedir}/huggingface_hub
 %{py_sitedir}/huggingface_hub-*.*-info
