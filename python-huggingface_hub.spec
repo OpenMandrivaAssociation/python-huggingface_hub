@@ -1,6 +1,6 @@
 Name:		python-huggingface_hub
-Version:	1.29.0
-Release:	2
+Version:	1.33.0
+Release:	1
 Source0:	https://files.pythonhosted.org/packages/source/h/huggingface_hub/huggingface_hub-%{version}.tar.gz
 Summary:	Client library for the Hugging Face Hub
 URL:		https://github.com/huggingface/huggingface_hub
@@ -44,7 +44,9 @@ safetensors, accelerate, peft and diffusers).
 %doc README.md
 %license LICENSE
 %{_bindir}/hf
+%{_bindir}/hf
 %{_bindir}/huggingface-cli
+%{_bindir}/tiny-agents
 %{_bindir}/tiny-agents
 %{py_sitedir}/huggingface_hub
 %{py_sitedir}/huggingface_hub-*.*-info
