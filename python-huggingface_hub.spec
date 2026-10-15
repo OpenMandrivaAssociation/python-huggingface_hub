@@ -44,9 +44,7 @@ safetensors, accelerate, peft and diffusers).
 %doc README.md
 %license LICENSE
 %{_bindir}/hf
-%{_bindir}/hf
 %{_bindir}/huggingface-cli
-%{_bindir}/tiny-agents
 %{_bindir}/tiny-agents
 %{py_sitedir}/huggingface_hub
 %{py_sitedir}/huggingface_hub-*.*-info
